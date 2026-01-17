@@ -73,6 +73,7 @@ struct ContentView: View {
             
             TextEditor(text: $textInput)
                 .font(.system(size: 14, design: .serif))
+                .focusable(true)
                 .padding()
                 .frame(height: 150)
         }
