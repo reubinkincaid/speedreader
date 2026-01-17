@@ -1,6 +1,7 @@
 import SwiftUI
 import AppKit
 
+@main
 struct SpeedReaderApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
@@ -18,6 +19,22 @@ struct SpeedReaderApp: App {
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApp.setActivationPolicy(.regular)
+        DispatchQueue.main.async {
+            NSApp.setActivationPolicy(.regular)
+        }
+    }
+}
+        .windowResizability(.contentSize)
+        .commands {
+            TextEditingCommands()
+        }
+    }
+}
+
+class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        DispatchQueue.main.async {
+            NSApp.setActivationPolicy(.regular)
+        }
     }
 }

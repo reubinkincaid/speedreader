@@ -17,6 +17,8 @@ struct SpeedReaderApp: App {
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApp.setActivationPolicy(.regular)
+        DispatchQueue.main.async {
+            NSApp.setActivationPolicy(.regular)
+        }
     }
 }
