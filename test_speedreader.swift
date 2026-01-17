@@ -6,12 +6,12 @@ import Foundation
 func calculateORPIndex(word: String) -> Int {
     let length = word.count
     
-    // For short words (1-3 characters), highlight the first character
-    if length <= 3 {
+    // For 1-2 character words, highlight the first character
+    if length <= 2 {
         return 0
     }
     
-    // For medium words (4-7 characters), highlight around the middle
+    // For 3-7 character words, highlight around the middle
     if length <= 7 {
         return length / 2
     }
