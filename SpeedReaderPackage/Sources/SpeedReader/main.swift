@@ -1,9 +1,6 @@
 import SwiftUI
-import AppKit
 
 struct SpeedReaderApp: App {
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -15,10 +12,4 @@ struct SpeedReaderApp: App {
     }
 }
 
-class AppDelegate: NSObject, NSApplicationDelegate {
-    func applicationDidFinishLaunching(_ notification: Notification) {
-        DispatchQueue.main.async {
-            NSApp.setActivationPolicy(.regular)
-        }
-    }
-}
+SpeedReaderApp.main()
