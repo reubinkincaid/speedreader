@@ -3,7 +3,7 @@
 import Foundation
 
 print("🚀 SpeedReader - Simple Version")
-print("=" * 40)
+print(String(repeating: "=", count: 40))
 print()
 
 // Simple ORP calculation

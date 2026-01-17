@@ -33,7 +33,7 @@ struct ContentView: View {
                         Text("Pause")
                             .font(.system(size: 12))
                             .padding(.horizontal, 16)
-                            .padding(.vertical, 8))
+                            .padding(.vertical, 8)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(6)
                     }
@@ -42,8 +42,8 @@ struct ContentView: View {
                     Button(action: stopReading) {
                         Text("Stop")
                             .font(.system(size: 12))
-                            .padding(.horizontal, 16))
-                            .padding(.vertical, 8))
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 8)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(6)
                     }
@@ -144,6 +144,7 @@ struct ContentView: View {
                     break
                 }
             }
+        }
         
         if !currentWord.isEmpty {
             result.append(cleanWord(currentWord))
