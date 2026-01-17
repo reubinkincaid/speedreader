@@ -7,7 +7,7 @@ struct SpeedReaderApp: App {
             ContentView()
                 .frame(minWidth: 800, minHeight: 600)
         }
-        .windowStyle(.hiddenTitleBar)
+        .windowToolbarStyle(.unified)
         .commands {
             TextEditingCommands()
         }
