@@ -9,15 +9,14 @@ struct SpeedReaderApp: App {
         }
         .windowStyle(.hiddenTitleBar)
         .commands {
-            CommandMenu("Edit") {
+            CommandGroup(replacing: .undoRedo) {
                 Button("Undo") {}
                 .keyboardShortcut("z", modifiers: .command)
                 
                 Button("Redo") {}
                 .keyboardShortcut("z", modifiers: [.command, .shift])
-                
-                Divider()
-                
+            }
+            CommandGroup(replacing: .pasteboard) {
                 Button("Cut") {}
                 .keyboardShortcut("x", modifiers: .command)
                 
@@ -26,9 +25,6 @@ struct SpeedReaderApp: App {
                 
                 Button("Paste") {}
                 .keyboardShortcut("v", modifiers: .command)
-                
-                Button("Paste and Match Style") {}
-                .keyboardShortcut("v", modifiers: [.command, .option])
                 
                 Divider()
                 
